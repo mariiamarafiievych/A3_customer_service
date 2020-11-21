@@ -1,10 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: customers13
+  name: customer-service-new
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   ports:
-    - port: 8083
+    - name: "customer-service-new"
+      port: 8083
+      targetPort: 8083
   selector:
-    app: customers13
+    app: customer-service-new
