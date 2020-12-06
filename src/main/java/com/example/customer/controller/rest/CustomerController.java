@@ -1,7 +1,7 @@
-package customer.controller;
+package com.example.customer.controller.rest;
 
-import customer.entities.Customer;
-import customer.service.CustomerService;
+import com.example.customer.entities.Customer;
+import com.example.customer.service.CustomerService;
 import javassist.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

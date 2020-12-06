@@ -1,6 +1,6 @@
-package customer.repo;
+package com.example.customer.repo;
 
-import customer.entities.Customer;
+import com.example.customer.entities.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.UUID;

@@ -1,4 +1,4 @@
-package customer.entities;
+package com.example.customer.entities;
 
 import javax.persistence.*;
 import java.util.UUID;

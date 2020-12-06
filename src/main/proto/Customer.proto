@@ -1,0 +1,37 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package com.example.grpcserver;
+
+message ProtoCustomer {
+  string firstName = 1;
+  string lastName = 2;
+}
+
+message GetRequest{
+
+}
+
+message GetResponse {
+  repeated ProtoCustomer customers = 1;
+}
+
+message CreateRequest{
+  ProtoCustomer customer = 1;
+    }
+
+message CreateResponse {
+}
+
+message DeleteRequest{
+  string customerId = 1;
+}
+
+message DeleteResponse{
+  string report = 1;
+}
+
+service customerService {
+  rpc get(GetRequest) returns (GetResponse);
+  rpc create(CreateRequest) returns (CreateResponse);
+  rpc delete(DeleteRequest) returns (DeleteResponse);
+}

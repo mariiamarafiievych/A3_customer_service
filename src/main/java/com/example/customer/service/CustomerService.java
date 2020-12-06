@@ -1,7 +1,7 @@
-package customer.service;
+package com.example.customer.service;
 
-import customer.entities.Customer;
-import customer.repo.CustomerRepository;
+import com.example.customer.entities.Customer;
+import com.example.customer.repo.CustomerRepository;
 import javassist.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -48,8 +48,12 @@ public class CustomerService {
     }
 
     @Transactional
-    public void deleteCustomerById(UUID id) throws NotFoundException{
-        customerRepository.delete(getCustomerById(id));
+    public void deleteCustomerById(UUID id) {
+        try {
+            customerRepository.delete(getCustomerById(id));
+        } catch (NotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
 
