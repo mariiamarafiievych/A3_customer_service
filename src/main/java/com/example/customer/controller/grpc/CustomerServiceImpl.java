@@ -2,7 +2,6 @@ package com.example.customer.controller.grpc;
 import com.example.customer.entities.Customer;
 import com.example.customer.service.CustomerService;
 import com.example.customer.*;
-import com.example.grpcserver.*;
 import io.grpc.stub.StreamObserver;
 import javassist.NotFoundException;
 import net.devh.boot.grpc.server.service.GrpcService;
